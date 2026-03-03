@@ -93,6 +93,7 @@ btn.addEventListener("click", async(evt)=>{
     msg.innerText= `${amtValue}${fromCurr.value} = ${finalAmount}${toCurr.value}`;
 });
 
+```
 ---
 
 📊 How It Works
