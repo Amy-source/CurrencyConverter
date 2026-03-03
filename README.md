@@ -76,16 +76,23 @@ The application fetches exchange rates dynamically using a free public API.
 Example implementation:
 
 ```javascript
-async function getExchangeRate(from, to, amount) {
-    const url = `https://api.exchangerate.host/latest?base=${from}&symbols=${to}`;
-    
-    const response = await fetch(url);
-    const data = await response.json();
 
-    const rate = data.rates[to];
-    return amount * rate;
-}
-```
+btn.addEventListener("click", async(evt)=>{
+    evt.preventDefault();
+    let amount=document.querySelector(".amount input")
+    let amtValue=amount.value;
+    if(amtValue===0 || amtValue<0){
+        amount.value="1";
+    }
+    
+    const url = `${BASE_URL}/${fromCurr.value.toLowercase()}.json`;
+    let response=  await fetch(url);
+    let data= await response.json();
+    console.log(data);
+    let rate= data[toCurr.value.toLowercase()];
+    let finalAmount= amtValue*rate
+    msg.innerText= `${amtValue}${fromCurr.value} = ${finalAmount}${toCurr.value}`;
+});
 
 ---
 
