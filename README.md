@@ -37,13 +37,13 @@ This project is ideal for demonstrating frontend development fundamentals and wo
 📂 Project Structure
 
 ```
-currency-exchange-rate-converter/
+CurrencyConverter/
 │
-├── index.html      # Application structure
-├── style.css       # Styling and layout
-├── script.js       # API logic and DOM manipulation
-└── README.md       # Project documentation
-```
+├── index.html        # Application structure
+├── style.css         # Styling and layout
+├── script.js         # Main logic and API integration
+├── country.js        # Country-to-currency mapping data
+└── README.md         # Project documentation
 
 ---
 
