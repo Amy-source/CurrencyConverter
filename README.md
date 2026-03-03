@@ -36,7 +36,6 @@ This project is ideal for demonstrating frontend development fundamentals and wo
 
 📂 Project Structure
 
-```
 CurrencyConverter/
 │
 ├── index.html        # Application structure
